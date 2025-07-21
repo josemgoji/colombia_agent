@@ -15,12 +15,18 @@ class VectorStoreManager:
 
     def __init__(self, persist_path: str = None):
         self.persist_path = persist_path or settings.CHROMA_DB_PATH
-        self.embedding_model_name = "sentence-transformers/all-MiniLM-L6-v2"
+        self.embedding_model_name = settings.EMBEDDING_MODEL
         self.embedding = HuggingFaceEmbeddings(model_name=self.embedding_model_name)
 
     def create_vector_store(self, texts: List[str]) -> Chroma:
         """
         Crea y guarda una base vectorial con los textos dados.
+        
+        Args:
+            texts (List[str]): Lista de textos a indexar.
+            
+        Returns:
+            Chroma: Instancia de la base vectorial creada.
         """
         documents = [Document(page_content=txt) for txt in texts]
 

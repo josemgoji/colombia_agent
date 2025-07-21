@@ -1,3 +1,4 @@
+import re
 import requests
 from bs4 import BeautifulSoup
 from typing import Optional
@@ -53,7 +54,6 @@ class WikipediaScraper:
         """
         Limpia referencias tipo [1], [2], espacios dobles, etc.
         """
-        import re
 
         # Elimina referencias entre corchetes tipo [1]
         text = re.sub(r"\[\d+\]", "", text)

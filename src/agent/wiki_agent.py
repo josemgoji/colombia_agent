@@ -23,11 +23,11 @@ class WikiAgent:
         
     def _load_llm(self):
         return HuggingFaceEndpoint(
-            repo_id="mistralai/Devstral-Small-2507", 
-            temperature=0.5,
-            max_new_tokens=128,
+            repo_id=settings.HF_REPO_ID, 
+            temperature=settings.HF_TEMPERATURE,
+            max_new_tokens=settings.HF_MAX_TOKENS,
             huggingfacehub_api_token=settings.HF_TOKEN,
-            provider="featherless-ai"
+            provider=settings.HF_PROVIDER
         )
 
 

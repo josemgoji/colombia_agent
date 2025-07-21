@@ -25,7 +25,7 @@ class RetrieverFactory:
         """
         if not os.path.exists(self.persist_path):
             logger.warning("Base vectorial no encontrada. Creando una nueva...")
-            prepare_data(self.persist_path)
+            prepare_data()
             
         else:
             logger.info("Base vectorial encontrada en disco.")
@@ -33,7 +33,7 @@ class RetrieverFactory:
         manager = VectorStoreManager(persist_path=self.persist_path)
         return manager.load_vector_store()
 
-    def get_retriever(self, k: int = 3) -> BaseRetriever:
+    def get_retriever(self, k: int = 10) -> BaseRetriever:
         """
         Devuelve un retriever listo para usar.
         """

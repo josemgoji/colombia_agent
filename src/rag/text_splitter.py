@@ -1,5 +1,6 @@
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from typing import List
+from src.config.constants import CHUNK_SIZE, CHUNK_OVERLAP
 
 class TextChunker:
     """
@@ -7,10 +8,10 @@ class TextChunker:
     más pequeños para ser indexados eficientemente en la base vectorial.
     """
 
-    def __init__(self, chunk_size: int = 500, chunk_overlap: int = 100):
+    def __init__(self):
         self.splitter = RecursiveCharacterTextSplitter(
-            chunk_size=chunk_size,
-            chunk_overlap=chunk_overlap,
+            chunk_size=CHUNK_SIZE,
+            chunk_overlap=CHUNK_OVERLAP,
             separators=["\n\n", "\n", ".", " "]
         )
 

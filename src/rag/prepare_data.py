@@ -2,7 +2,6 @@ import logging
 from src.rag.loader import WikipediaScraper
 from src.rag.vector_store import VectorStoreManager
 from src.rag.text_splitter import TextChunker
-from src.config.constants import WIKIPEDIA_URL
 from src.config.env import settings
 
 logging.basicConfig(level=logging.INFO)
@@ -10,12 +9,10 @@ logger = logging.getLogger(__name__)
 
 
 class DataPreparator:
-    def __init__(self, url: str = WIKIPEDIA_URL, chunk_size: int = 500, chunk_overlap: int = 100):
+    def __init__(self, url: str = settings.WIKIPEDIA_URL):
         self.url = url
-        self.chunk_size = chunk_size
-        self.chunk_overlap = chunk_overlap
         self.scraper = WikipediaScraper(self.url)
-        self.chunker = TextChunker(chunk_size=self.chunk_size, chunk_overlap=self.chunk_overlap)
+        self.chunker = TextChunker()
         self.vector_store_manager = VectorStoreManager(persist_path=settings.CHROMA_DB_PATH)
 
     def prepare(self):
@@ -30,7 +27,7 @@ class DataPreparator:
 
         logger.info("Generando base vectorial...")
         self.vector_store_manager.create_vector_store(text_chunks)
-        logger.info(f"✅ Base vectorial creada y guardada en: {settings.CHROMA_DB_PATH}")
+        logger.info(f"Base vectorial creada y guardada en: {settings.CHROMA_DB_PATH}")
 
 
 def prepare_data():
