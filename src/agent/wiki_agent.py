@@ -2,8 +2,8 @@ from langchain.chains import RetrievalQA
 from langchain.prompts import PromptTemplate
 from langchain_huggingface import HuggingFaceEndpoint
 
-from src.rag.retriever import RetrieverFactory
-from src.config.env import settings
+from src.rag.retriever_factory import RetrieverFactory
+from src.config.settings import settings
 from src.config.constants import PROMPT_TEMPLATE_PATH
 from pathlib import Path
 

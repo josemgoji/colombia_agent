@@ -4,7 +4,7 @@ from langchain.schema.document import Document
 from typing import List
 import os
 
-from src.config.env import settings
+from src.config.settings import settings
 
 
 class VectorStoreManager:

@@ -4,9 +4,9 @@ import logging
 from langchain_community.vectorstores import Chroma
 from langchain.schema.retriever import BaseRetriever
 
-from src.rag.vector_store import VectorStoreManager
-from src.rag.prepare_data import prepare_data
-from src.config.env import settings
+from src.rag.vector_store_manager import VectorStoreManager
+from src.rag.data_preparator import prepare_data
+from src.config.settings import settings
 
 logger = logging.getLogger(__name__)
 

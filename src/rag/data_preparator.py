@@ -1,8 +1,8 @@
 import logging
-from src.rag.loader import WikipediaScraper
-from src.rag.vector_store import VectorStoreManager
-from src.rag.text_splitter import TextChunker
-from src.config.env import settings
+from src.rag.wikipedia_scraper import WikipediaScraper
+from src.rag.vector_store_manager import VectorStoreManager
+from src.rag.text_chunker import TextChunker
+from src.config.settings import settings
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
