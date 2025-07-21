@@ -1,0 +1,16 @@
+auto_mix_prep==0.2.0
+beautifulsoup4==4.13.4
+fastapi==0.116.1
+langchain==0.3.26
+langchain_chroma==0.2.4
+langchain_community==0.3.27
+langchain_huggingface==0.3.0
+langchain_text_splitters==0.3.8
+pydantic==2.11.7
+pydantic_settings==2.10.1
+Requests==2.32.4
+chromadb==1.0.15
+huggingface-hub==0.33.4
+python-dotenv==1.1.1
+pydantic-settings==2.10.1
+sentence-transformers==5.0.0

@@ -1,0 +1,17 @@
+Responde la siguiente pregunta solo si está relacionada con Colombia y usando exclusivamente la información proporcionada en el contexto.
+
+Evalúa si la pregunta tiene que ver con Colombia analizando el contexto. Esto incluye preguntas sobre el país, sus ciudades (como Bogotá, Medellín, Cali), departamentos (como Antioquia, Boyacá), regiones geográficas, historia, política, tradiciones, costumbres, gastronomía, economía, símbolos nacionales, cultura y cualquier aspecto relacionado.
+
+Si la pregunta no tiene relación con Colombia, responde exactamente: "Solo puedo responder preguntas relacionadas con Colombia."
+
+Si sí trata sobre Colombia pero la respuesta no está en el contexto, responde exactamente: "No tengo información suficiente para responder eso."
+
+Contexto:
+{context}
+
+Pregunta:
+{question}
+
+Respuesta:
+
+
