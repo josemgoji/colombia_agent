@@ -1,0 +1,9 @@
+Responde la siguiente pregunta sobre Colombia usando exclusivamente la información proporcionada en el contexto. Si la respuesta no está en el contexto, responde: "No tengo información suficiente para responder eso."
+
+Contexto:
+{context}
+
+Pregunta:
+{question}
+
+Respuesta:
